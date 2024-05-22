@@ -47,15 +47,15 @@ Total size of the message in bits (excluding User Data Header if present)
 
 Number of segment(s)
 
-### [`getNonGsmCharacters()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L87C21-L87C40)
+#### [`getNonGsmCharacters()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L87C21-L87C40)
 
 Return an array with the non GSM-7 characters in the body. It can be used to replace character and reduce the number of segments
 
-### [`getNumberOfUnicodeScalars()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L92C21-L92C46)
+#### [`getNumberOfUnicodeScalars()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L92C21-L92C46)
 
 Number of Unicode scalars
 
-### [`getNumberOfCharacters()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L97C21-L97C42)
+#### [`getNumberOfCharacters()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L97C21-L97C42)
 
 Number of characters
 
