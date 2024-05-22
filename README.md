@@ -25,49 +25,46 @@ echo $segmentedMessage.getSegmentsCount(); // "1"
 
 This is the main class exposed by the package
 
-#### [`constructor(message, encoding)`](https://github.com/TwilioDevEd/message-segment-calculator/blob/403313a44ed406b3669cf3c57f32ca98fd92b1e1/src/libs/SegmentedMessage.ts#L37)
+#### [`__construct($message, $encoding, $smartEncoding)`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L31C21-L31C117)
 Arguments:
-* `message`: Body of the SMS
-* `encoding`: Optional: encoding. It can be `SmsEncoding` enum value or `auto`. Default value: `auto`
+* `$message`: Body of the SMS
+* `$encoding`: Optional: encoding. It can be `SmsEncoding` enum value or `auto`. Default value: `auto`
+* `$smartEncoding`: Optional: if smart encoding enabled. Default value: `false`
 
-##### `getRealEncodingName()`
+##### [`getRealEncodingName()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L67)
 
 Returns the name of the calculated encoding for the message: `GSM-7` or `UCS-2`
 
-#### `getTotalSize()`
+#### [`getTotalSize()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L72)
 
 Total size of the message in bits (including User Data Header if present)
 
-#### [`messageSize`](https://github.com/TwilioDevEd/message-segment-calculator/blob/403313a44ed406b3669cf3c57f32ca98fd92b1e1/src/libs/SegmentedMessage.ts#L172)
+#### [`getMessageSize()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L77C21-L77C35)
 
 Total size of the message in bits (excluding User Data Header if present)
 
-#### [`segmentsCount`](https://github.com/TwilioDevEd/message-segment-calculator/blob/403313a44ed406b3669cf3c57f32ca98fd92b1e1/src/libs/SegmentedMessage.ts#L184)
+#### [`getSegmentsCount`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L82C21-L82C37)
 
 Number of segment(s)
 
-### [`getNonGsmCharacters()`]
+### [`getNonGsmCharacters()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L87C21-L87C40)
 
 Return an array with the non GSM-7 characters in the body. It can be used to replace character and reduce the number of segments
 
-## Try the library
+### [`getNumberOfUnicodeScalars()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L92C21-L92C46)
 
-If you want to test the library you can use the script provided in `playground/index.js`. Install the dependencies (`npm install`) and then run:
+Number of Unicode scalars
 
-```shell
-$ node playground/index.js "👋 Hello World 🌍"
-```
+### [`getNumberOfCharacters()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L97C21-L97C42)
+
+Number of characters
 
 ## Contributing
 
-This code is open source and welcomes contributions. All contributions are subject to our [Code of Conduct](https://github.com/twilio-labs/.github/blob/master/CODE_OF_CONDUCT.md).
+This code is open source and welcomes contributions.
 
-The source code for the library is all contained in the `src` folder. Before submitting a PR:
-
-* Run linter using `npm run lint` command and make sure there are no linter error
-* Compile the code using `npm run build` command and make sure there are no errors
-* Execute the test using `npm test` and make sure all tests pass
-* Transpile the code using `npm run webpack` and test the web page in `docs/index.html`
+The source code for the library is all contained in the `src` folder. 
+Before submitting a PR run Unit test in the directory `test/Unit` and make sure all tests pass.
 
 ## License
 
@@ -76,5 +73,3 @@ The source code for the library is all contained in the `src` folder. Before sub
 ## Disclaimer
 
 No warranty expressed or implied. Software is as is.
-
-[twilio]: https://www.twilio.com
