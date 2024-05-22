@@ -16,8 +16,8 @@ use Poletaew\SmsSegmentCalculator\Models\SegmentedMessage;
 
 $segmentedMessage = new SegmentedMessage('Hello World');
 
-echo $segmentedMessage.getRealEncodingName() . PHP_EOL; // "GSM-7"
-echo $segmentedMessage.getSegmentsCount(); // "1"
+echo $segmentedMessage->getRealEncodingName() . PHP_EOL; // "GSM-7"
+echo $segmentedMessage->getSegmentsCount(); // "1"
 ```
 
 ## Documentation
