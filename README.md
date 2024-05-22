@@ -31,7 +31,7 @@ Arguments:
 * `$encoding`: Optional: encoding. It can be `SmsEncoding` enum value or `auto`. Default value: `auto`
 * `$smartEncoding`: Optional: if smart encoding enabled. Default value: `false`
 
-##### [`getRealEncodingName()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L67)
+#### [`getRealEncodingName()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L67)
 
 Returns the name of the calculated encoding for the message: `GSM-7` or `UCS-2`
 
