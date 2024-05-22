@@ -43,7 +43,7 @@ Total size of the message in bits (including User Data Header if present)
 
 Total size of the message in bits (excluding User Data Header if present)
 
-#### [`getSegmentsCount`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L82C21-L82C37)
+#### [`getSegmentsCount()`](https://github.com/poletaew/sms-segment-calculator/blob/bbde70b37ce18def7649a3d8330b393d0e3af8e7/src/Models/SegmentedMessage.php#L82C21-L82C37)
 
 Number of segment(s)
 
